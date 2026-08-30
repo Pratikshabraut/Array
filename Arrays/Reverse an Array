@@ -1,0 +1,31 @@
+import java.util.Arrays;
+
+public class ReverseArray {
+
+    public static void main(String[] args) {
+
+        int[] nums = {1, 2, 3, 4, 5};
+
+        int left = 0;
+        int right = nums.length - 1;
+
+        while (left < right) {
+
+            // Store left value temporarily
+            int temp = nums[left];
+
+            // Put right value at left
+            nums[left] = nums[right];
+
+            // Put original left value at right
+            nums[right] = temp;
+
+            // Move pointers
+            left++;
+            right--;
+        }
+
+        // Print reversed array
+        System.out.println(Arrays.toString(nums));
+    }
+}
